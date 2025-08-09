@@ -1,3 +1,4 @@
 export default function Index() {
-  return <div>Dev브랜치 생성</div>;
+  return <div></div>;
 }
+//dev 브랜치 생성

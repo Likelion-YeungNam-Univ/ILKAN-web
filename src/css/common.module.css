@@ -1,0 +1,14 @@
+/*  mypage,jobmatch,kanmatch 용   */
+.boxSmall {
+  width: 159px;
+  height: 24px;
+  flex-shrink: 0;
+  aspect-ratio: 159 / 50;
+}
+
+/* 전체 초기화 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}

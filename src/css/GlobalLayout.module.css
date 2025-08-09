@@ -1,0 +1,174 @@
+@value common: "./common.module.css";
+
+/* 전체 레이아웃 */
+.wrapper {
+  display: flex;
+  position: relative;
+}
+
+ul {
+  padding-left: 0; /* 기본 들여쓰기 제거 */
+  margin: 0; /* 기본 상하 마진 제거 */
+  list-style: none; /* 기본 점(●) 제거 */
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: auto;
+}
+
+/* 좌측 사이드바 */
+.sidebar {
+  position: fixed; /* ← 화면 기준으로 고정 */
+  width: 240px;
+  height: 3036px;
+  flex-shrink: 0;
+  background: #f5f6f8;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+/* 로고 */
+.logo {
+  width: 159px;
+  height: 50px;
+  flex-shrink: 0;
+  aspect-ratio: 159/50;
+  padding-top: 30px;
+}
+
+/* 마이페이지 영역 */
+.MYPAGE {
+  composes: boxSmall from common;
+  display: flex;
+  padding-top: 50px;
+}
+
+/* 메인메뉴 버튼 */
+.Btn {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background: #d9d9d9;
+  border: none;
+  cursor: pointer;
+}
+
+/* 메인메뉴 텍스트 폰트 */
+.Font {
+  display: flex;
+  width: 90px;
+  height: 24px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #808080;
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 26px;
+}
+
+/* JOBMATCH  영역 */
+.JOBMATCH {
+  composes: boxSmall from common;
+  display: flex;
+  padding-top: 40px;
+}
+/* KANMATCH 영역 */
+.KANMATCH {
+  composes: boxSmall from common;
+  display: flex;
+  padding-top: 40px;
+}
+
+/* 좌측 사이드 바 구분선 구현 */
+.Line {
+  width: 200px;
+  height: 0;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+/*서브메뉴 */
+.subMenu {
+  margin-top: 20px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /*  항목 간 간격 지정 */
+}
+
+.subItem {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.subBtn {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background: #d9d9d9;
+  border: none;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.subFont {
+  display: flex;
+  width: 100px;
+  height: 24px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+
+  color: #808080;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* 우측 콘텐츠 */
+.content {
+  display: flex;
+  width: 1198px;
+  height: 1024px;
+  padding: 33px 83px 951px 983px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 52px;
+  background: #fff;
+}
+
+/* 아이콘 */
+.icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}
+
+/* 아이콘 위치 정렬 */
+.iconGroup {
+  position: absolute;
+  position: fixed; /* 아이콘들 화면 상단에 고정해서 스크롤 해도 위치 유지하게 두었습니다*/
+  top: 33px; /* 상단에서 33px */
+  right: 80px; /* 우측에서 80px */
+  display: flex;
+  gap: 52px; /* 아이콘 간의 간격 */
+  z-index: 1000;
+}
